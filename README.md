@@ -21,8 +21,10 @@
 
 ```powershell
 # 克隆项目
-git clone https://gitee.com/LeoMooreCST/crawler321-preview.git
+git clone https://github.com/LeoMooreCST/crawler321-preview.git
 ```
+
+> gitee请查看：[LeoMooreCST/crawler321-preview ](https://gitee.com/LeoMooreCST/crawler321-preview/tree/master)
 
 ### 1. Windows环境
 
