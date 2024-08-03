@@ -35,8 +35,7 @@ gitee请查看：[LeoMooreCST/crawler321-preview ](https://gitee.com/LeoMooreCST
 ```powershell
 .\install.ps1
 ```
-
-    **或者**在cmd中**依次执行**以下命令：
+**或者**在cmd中**依次执行**以下命令：
 
 ```powershell
 python -m venv ./
