@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: crawler321
+Version: 0.1.0
+Summary: Crawler321: An intelligent and automatic crawler
+Home-page: UNKNOWN
+Author: LeoMoore
+Author-email: princekinqiang@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests ==2.32.3
+Requires-Dist: pydantic ==2.8.2
+Requires-Dist: typing ==3.7.4.3
+Requires-Dist: bs4 ==0.0.2
+Requires-Dist: numpy ==1.24.4
+Requires-Dist: scikit-learn ==1.3.2
+Requires-Dist: selenium ==4.15.2
+Requires-Dist: lxml ==4.9.3
+Requires-Dist: pandas ==2.0.3
+
+# crawler321 v0.1.0
+
+crawler321一定程度上简化了爬虫过程，引入精细化的页面内容提取策略和个性化自定义提取策略，同时引入大语言模型，让网页信息获取更加方便便捷，希望通过像数数"1,2,3"一样即可获取你想要的信息
+
+## 💎功能和特性
+
+- ✏️支持精细化和个性化的提取策略，满足丰富多样的场景需求：如结构化数据、目录型、内容型等
+- 🎯简单而高效的操作，能够自动识别各种各样的网页类型，甚至不用自己指定策略！
+- 🗒️灵活稳定的结果输出：自动提取网页元数据，以json缩进形式输出
+- ⚒️友好的用户交互方式：简单的命令让机器像人一般操控网页，如点击、输入、刷新等操作
+- 👼触手可及的人工智能：引入大语言模型，一句话就轻松获取自己最想要的内容
+- 🪄强大的数据备份机制：可提供数据本地存储机制，即使发生中断也能快速获取历史数据
+- 📊丰富充实的数据报告：让你快速定位未成功的请求，多样化的统计数据分析整个crawl过程
+- 📌一键使用的代理策略：能让你迅速摆脱同一机器请求次数过多的问题
+
+## 🔧如何安装
+
+详细说明如何安装此爬虫工具，包括通过pip安装和源码安装。
+
+```bash
+# TODO
+```
+
+## ✨快速入手
+
+### 示例1：什么也不用做
+
+```python
+import json
+from crawler321.run_crawler import RunCrawler
+crawler = RunCrawler()
+result = crawler.run(url="https://www.demo.com")
+result = json.loads(result)
+print(result["res"])
+```
+
+### 示例2：只想提取结构化数据
+
+```python
+import json
+from crawler321.extraction_strategy import ObjectExtractionStrategy
+from crawler321.run_crawler import RunCrawler
+crawler = RunCrawler()
+extraction_strategy = ObjectExtractionStrategy(objects=["姓名","邮箱"]) # 只返回"姓名"和"邮箱"
+result = crawler.run(
+    url="https://www.demo.com",
+    extraction_strategy=extraction_strategy
+)
+result = json.loads(result)
+print(result["res"])
+```
+
+### 示例3：让机器像人一样操作
+
+```python
+from crawler321.crawler_strategy import SeleniumCrawlerStrategy
+from crawler321.run_crawler import RunCrawler
+from crawler321.action import By, Do, SeleniumAction
+crawler = RunCrawler(
+    crawler_strategy=SeleniumCrawlerStrategy()
+)
+actions = [
+    SeleniumAction(action=Do.INPUT, target={By.KEY_WORD: "请输入账号"}, content="123456", wait=2)
+    SeleniumAction(action=Do.REFRESH)
+]
+crawler.run(
+    url="https://www.page1.com",
+    actions=actions
+)
+
+```
+
+## 📖使用手册
+
+更多功能和特性请关注使用手册：xxxxx，正在健全和完善中
+
+## 📧联系方式
+
+

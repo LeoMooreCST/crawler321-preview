@@ -2,7 +2,7 @@
 
 **crawler321 预览版 一定程度上简化了爬虫过程，引入精细化的页面内容提取策略和个性化自定义提取策略，同时引入大语言模型，让网页信息获取更加方便便捷，希望通过像数数"1,2,3"一样即可获取你想要的信息**
 
-> **提示**：由于该项目目前处于建设测试阶段，因某些原因暂不能公开完整源码，还望见谅！但提供windows和linux环境下的使用，目前公开的项目完全免费自由使用，详见"安装使用"部分
+> **提示**：该项目目前处于建设测试阶段，因某些原因暂不能公开完整源码，还望见谅！但提供windows和linux环境下的使用，目前公开的项目完全免费自由使用，详见"安装使用"部分。
 
 ## 💎 功能和特性
 
@@ -17,26 +17,26 @@
 
 ## 🔧 安装使用
 
-基本要求：python >= 3.8，建议在虚拟环境中使用, 以下方式会自动创建虚拟环境，无需手动创建
+基本要求：python >= 3.8，参考安装教程中使用venv创建虚拟教程，也建议使用此方式。
 
 ```powershell
 # 克隆项目
 git clone https://github.com/LeoMooreCST/crawler321-preview.git
 ```
 
-> gitee请查看：[LeoMooreCST/crawler321-preview ](https://gitee.com/LeoMooreCST/crawler321-preview/tree/master)
+gitee请查看：[LeoMooreCST/crawler321-preview ](https://gitee.com/LeoMooreCST/crawler321-preview.git)
 
 ### 1. Windows环境
 
-我们简化了安装过程：
+我们简化了安装过程
 
-- **第一步**：请将crawler321-preview for windows解压后文件夹下所有文件复制到一个新文件夹(举例:  crawler321)下，在powershell终端中(不是cmd！！！), 进入crawler321文件夹，执行：
+- **第一步**：进入crawler321-preview/windows文件夹。在powershell终端中(不是cmd)，执行：
 
 ```powershell
 .\install.ps1
 ```
 
-如果你不知道powershell在哪，在cmd中**依次执行**如下命令也可：
+    **或者**在cmd中**依次执行**以下命令：
 
 ```powershell
 python -m venv ./
@@ -47,7 +47,16 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip install --upgrade spark_ai_python -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
-> 该过程大约7-15分钟左右，请耐心等待
+> 该过程大约7-15分钟左右，请耐心等待。
+>
+> 此过程若出现以下错误，可忽略。
+
+```powershell
+ERROR: opentelemetry-proto 1.26.0 has requirement protobuf<5.0,>=3.19, but you'll have protobuf 5.27.3 which is incompatible.
+ERROR: opentelemetry-api 1.26.0 has requirement importlib-metadata<=8.0.0,>=6.0, but you'll have importlib-metadata 8.2.0 which is incompatible.
+ERROR: llama-index-core 0.10.59 has requirement tenacity!=8.4.0,<9.0.0,>=8.2.0, but you'll have tenacity 9.0.0 which is incompatible.  
+ERROR: llama-index-legacy 0.9.48 has requirement tenacity<9.0.0,>=8.2.0, but you'll have tenacity 9.0.0 which is incompatible.
+```
 
 - **第二步**：
   - 如果主机上已经有了chrome浏览器, 但未chromedriver，在[Chrome for Testing availability (googlechromelabs.github.io)](https://googlechromelabs.github.io/chrome-for-testing/)下载对应版本(在chrome浏览器查看版本，若不是最新的更新即可)的chromedriver，将chromedriver添加到环境变量即可
@@ -58,18 +67,11 @@ pip install --upgrade spark_ai_python -i https://pypi.tuna.tsinghua.edu.cn/simpl
     .\chrome.ps1
     ```
 
-如果上述过程未报错，即环境安装成功，若出现以下错误，可忽略。
-
-```powershell
-ERROR: opentelemetry-proto 1.26.0 has requirement protobuf<5.0,>=3.19, but you'll have protobuf 5.27.3 which is incompatible.
-ERROR: opentelemetry-api 1.26.0 has requirement importlib-metadata<=8.0.0,>=6.0, but you'll have importlib-metadata 8.2.0 which is incompatible.
-ERROR: llama-index-core 0.10.59 has requirement tenacity!=8.4.0,<9.0.0,>=8.2.0, but you'll have tenacity 9.0.0 which is incompatible.  
-ERROR: llama-index-legacy 0.9.48 has requirement tenacity<9.0.0,>=8.2.0, but you'll have tenacity 9.0.0 which is incompatible.
-```
+> 如果上述过程未报错，即环境安装成功，可对环境进行测试
 
 ### 2. linux(推荐WSL)
 
-将crawler321-preview for linux文件夹解压后所有文件复制到一个新文件夹(举例:  crawler321)下，进入crawler321文件夹，执行如下命令即可
+进入crawler321-preview/linux文件夹，执行如下命令即可：
 
 ```bash
 source install.bash
