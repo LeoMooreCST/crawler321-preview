@@ -1,0 +1,1 @@
+crawler321-preview/application/*.exe filter=lfs diff=lfs merge=lfs -text
