@@ -1,4 +1,5 @@
-# crawler321-preview v0.1.0
+# crawler321-preview v0.2.0
+**！！！！！！！windows可视化界面初步上线！！！！！！！**
 
 **crawler321 预览版 一定程度上简化了爬虫过程，引入精细化的页面内容提取策略和个性化自定义提取策略，同时引入大语言模型，让网页信息获取更加方便便捷，希望通过像数数"1,2,3"一样即可获取你想要的信息**
 
@@ -17,6 +18,12 @@
 
 ## 🔧 安装使用
 
+### windows运行版
+直接下载crawler321-preview/application/crawler321.exe即可!
+![5d1383be566b497b35117c9c6a3d39ca](https://github.com/user-attachments/assets/f52ffc26-9324-4f22-9230-43e6e487cf5d)
+
+
+### 手动安装
 基本要求：python >= 3.8，参考安装教程中使用venv创建虚拟教程，也建议使用此方式。
 
 ```powershell
